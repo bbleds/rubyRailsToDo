@@ -5,5 +5,11 @@ describe "Creating todo lists" do
     # visit "/todo_lists"
     # click_link "New Todo list"
     # expect(page).to have_content("New Todo List")
+
+    # fill_in "Title", with: "Example Title"
+    # fill_in "Description", with: "This is my example description"
+    # click_button "Create Todo list"
+    #
+    # expect(page).to have_content("Example Title")
   end
 end
