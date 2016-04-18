@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Brodos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brodos.each do |brodo| %>
+      <tr>
+        <td><%= brodo.title %></td>
+        <td><%= brodo.description %></td>
+        <td><%= link_to 'Show', brodo %></td>
+        <td><%= link_to 'Edit', edit_brodo_path(brodo) %></td>
+        <td><%= link_to 'Destroy', brodo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Brodo', new_brodo_path %>

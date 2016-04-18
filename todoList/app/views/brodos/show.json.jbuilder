@@ -1,0 +1,1 @@
+json.extract! @brodo, :id, :title, :description, :created_at, :updated_at

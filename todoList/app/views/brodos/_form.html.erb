@@ -1,0 +1,25 @@
+<%= form_for(@brodo) do |f| %>
+  <% if @brodo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@brodo.errors.count, "error") %> prohibited this brodo from being saved:</h2>
+
+      <ul>
+      <% @brodo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

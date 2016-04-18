@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @brodo.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @brodo.description %>
+</p>
+
+<%= link_to 'Edit', edit_brodo_path(@brodo) %> |
+<%= link_to 'Back', brodos_path %>
